@@ -1,9 +1,10 @@
 import {Suspense} from 'react'
 import {Link, Route, Routes} from 'react-router-dom'
 
-import {HomeAsync} from './pages/Home/Home.async'
-import {AboutAsync} from './pages/About/About.async'
-import {useTheme} from './theme/useTheme'
+import {HomePage} from 'pages/Home'
+import {AboutPage} from 'pages/About'
+import {clsx} from 'shared/lib'
+import {useTheme} from 'shared/contexts'
 
 import './styles/index.scss'
 
@@ -12,7 +13,7 @@ const App = () => {
 	const {theme, toggleTheme} = useTheme()
 
 	return (
-		<div className={`app ${theme}`}>
+		<div className={clsx('app', theme)}>
 			<Link to={'/'}>Главная</Link>
 			<Link to={'/about'}>Инфо</Link>
 
@@ -20,8 +21,8 @@ const App = () => {
 
 			<Suspense fallback={<div>Loading...</div>}>
 				<Routes>
-					<Route path={'/'} element={<HomeAsync />} />
-					<Route path={'/about'} element={<AboutAsync/>} />
+					<Route path={'/'} element={<HomePage />} />
+					<Route path={'/about'} element={<AboutPage/>} />
 				</Routes>
 			</Suspense>
 		</div>

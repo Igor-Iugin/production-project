@@ -10,7 +10,11 @@
 		/* Позволяет работать с пакетами которые юзают common.js как с обычными */
 		"esModuleInterop": true,
 		/* Если библиотека не имеет default import, лоадеры ts/babel создают их */
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"paths": {
+			"*": ["./src/*"]
+		}
 	},
 	"ts-node": {
 		"compilerOptions": {
