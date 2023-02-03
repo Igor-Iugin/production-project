@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"noImplicitAny": true,
+		"module": "ESNext",
+		"target": "es6",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"moduleResolution": "node",
+		/* Позволяет работать с пакетами которые юзают common.js как с обычными */
+		"esModuleInterop": true,
+		/* Если библиотека не имеет default import, лоадеры ts/babel создают их */
+		"allowSyntheticDefaultImports": true
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
