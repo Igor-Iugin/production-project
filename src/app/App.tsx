@@ -1,10 +1,7 @@
-import {Suspense} from 'react'
-import {Link, Route, Routes} from 'react-router-dom'
-
-import {HomePage} from 'pages/Home'
-import {AboutPage} from 'pages/About'
+import {Link} from 'react-router-dom'
 import {clsx} from 'shared/lib'
 import {useTheme} from 'shared/contexts'
+import {AppRouter} from 'app/providers/router'
 
 import './styles/index.scss'
 
@@ -18,13 +15,7 @@ const App = () => {
 			<Link to={'/about'}>Инфо</Link>
 
 			<button onClick={toggleTheme}>Toggle</button>
-
-			<Suspense fallback={<div>Loading...</div>}>
-				<Routes>
-					<Route path={'/'} element={<HomePage />} />
-					<Route path={'/about'} element={<AboutPage/>} />
-				</Routes>
-			</Suspense>
+			<AppRouter/>
 		</div>
 	)
 }
