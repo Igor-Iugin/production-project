@@ -10,4 +10,9 @@
   color: var(--primary-color);
 
   min-height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    'nav nav'
+    'sidebar nav';
 }
