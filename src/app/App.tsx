@@ -1,7 +1,7 @@
-import {Link} from 'react-router-dom'
 import {clsx} from 'shared/lib'
 import {useTheme} from 'shared/contexts'
 import {AppRouter} from 'app/providers/router'
+import {Navbar} from 'widgets/Navbar'
 
 import './styles/index.scss'
 
@@ -11,9 +11,7 @@ const App = () => {
 
 	return (
 		<div className={clsx('app', theme)}>
-			<Link to={'/'}>Главная</Link>
-			<Link to={'/about'}>Инфо</Link>
-
+			<Navbar/>
 			<button onClick={toggleTheme}>Toggle</button>
 			<AppRouter/>
 		</div>
