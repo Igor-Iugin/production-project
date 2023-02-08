@@ -1,8 +1,8 @@
 import {FC} from 'react'
 import {clsx} from 'shared/lib'
+import {ThemeSwitch} from 'shared/ui'
 
 import cls from './Navbar.m.scss'
-import {useTheme} from 'shared/contexts'
 
 
 interface NavbarProps {
@@ -10,10 +10,9 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = ({className}) => {
-	const {toggleTheme} = useTheme()
 	return (
 		<nav className={clsx(cls.root, className)}>
-			<button onClick={toggleTheme}>Toggle</button>
+			<ThemeSwitch/>
 		</nav>
 	)
 }
