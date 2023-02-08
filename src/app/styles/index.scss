@@ -13,6 +13,8 @@
 
   display: grid;
   grid-template-areas:
-    'nav nav'
-    'sidebar nav';
+    'header  header'
+    'nav    content';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
 }

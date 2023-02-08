@@ -1,11 +1,12 @@
 import React from 'react'
+import {Page} from 'shared/ui'
 
 
 const About = () => {
 	return (
-		<div>
+		<Page>
 			About
-		</div>
+		</Page>
 	)
 }
 

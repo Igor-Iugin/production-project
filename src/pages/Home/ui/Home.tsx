@@ -1,11 +1,12 @@
 import React from 'react'
+import {Page} from 'shared/ui'
 
 
 const Home = () => {
 	return (
-		<div>
+		<Page>
 			Home
-		</div>
+		</Page>
 	)
 }
 
