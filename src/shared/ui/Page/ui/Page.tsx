@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, ReactNode} from 'react'
 import {clsx} from 'shared/lib'
 
 import cls from './Page.m.scss'
@@ -6,11 +6,13 @@ import cls from './Page.m.scss'
 
 interface PageProps {
 	className?: string
+	children: ReactNode
 }
 
-export const Page: FC<PageProps> = ({className}) => {
+export const Page: FC<PageProps> = ({className, children}) => {
 	return (
-		<div className={clsx(cls.root, className)}>
-		</div>
+		<main className={clsx(cls.root, className)}>
+			{children}
+		</main>
 	)
 }
