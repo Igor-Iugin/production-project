@@ -1,3 +1,4 @@
+import {Suspense} from 'react'
 import {clsx} from 'shared/lib'
 import {useTheme} from 'shared/contexts'
 import {AppRouter} from 'app/providers/router'
@@ -12,9 +13,11 @@ const App = () => {
 
 	return (
 		<div className={clsx('app', theme)}>
-			<Header/>
-			<Navbar/>
-			<AppRouter/>
+			<Suspense fallback=''>
+				<Header/>
+				<Navbar/>
+				<AppRouter/>
+			</Suspense>
 		</div>
 	)
 }
