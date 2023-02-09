@@ -1,6 +1,7 @@
 import {FC, useState} from 'react'
 import {clsx} from 'shared/lib'
-import {Button, ThemeSwitch} from 'shared/ui'
+import {Button} from 'shared/ui'
+import {ThemeSwitch} from 'features/theme-switch'
 
 import cls from './Navbar.m.scss'
 
