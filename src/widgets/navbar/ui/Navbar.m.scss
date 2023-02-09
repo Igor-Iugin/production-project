@@ -12,11 +12,11 @@
 }
 
 .open .switchers {
-  display: grid;
+  display: flex;
 }
 
 .switchers {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   gap: 10px;

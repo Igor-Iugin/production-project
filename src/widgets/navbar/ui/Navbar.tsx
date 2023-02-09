@@ -4,6 +4,7 @@ import {Button} from 'shared/ui'
 import {ThemeSwitch} from 'features/theme-switch'
 
 import cls from './Navbar.m.scss'
+import {LangSwitch} from 'features/lang-switch'
 
 
 interface NavbarProps {
@@ -23,7 +24,7 @@ export const Navbar: FC<NavbarProps> = ({className}) => {
 
 			<div className={cls.switchers}>
 				<ThemeSwitch/>
-
+				<LangSwitch/>
 			</div>
 		</nav>
 	)
