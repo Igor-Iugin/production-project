@@ -11,6 +11,7 @@
 		"esModuleInterop": true,
 		/* Если библиотека не имеет default import, лоадеры ts/babel создают их */
 		"allowSyntheticDefaultImports": true,
+		"strictNullChecks": true,
 		"baseUrl": ".",
 		"paths": {
 			"*": ["./src/*"]
