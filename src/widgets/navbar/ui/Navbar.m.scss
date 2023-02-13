@@ -1,23 +1,23 @@
 .root {
-  display: grid;
-  align-content: space-between;
-  width: 80px;
-  background: var(--inverted-bg-color);
-  transition: width .3s ease-in-out;
-  padding: 0 10px 20px;
+	display: grid;
+	align-content: space-between;
+	width: 80px;
+	background: var(--inverted-bg-color);
+	transition: width .3s ease-in-out;
+	padding: 0 10px 20px;
 }
 
 .open {
-  width: 300px;
-}
-
-.open .switchers {
-  display: flex;
+	width: 300px;
 }
 
 .switchers {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.open .switchers {
+	display: flex;
 }
