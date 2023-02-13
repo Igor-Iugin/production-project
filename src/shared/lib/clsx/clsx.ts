@@ -1,4 +1,4 @@
-type CNProps = string | Record<string, boolean | string> | string[] | undefined
+type CNProps = string | Record<string, unknown> | string[] | undefined
 
 
 export function clsx(...args: CNProps[]): string | undefined {
