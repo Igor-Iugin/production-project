@@ -1,6 +1,7 @@
-export type AppRoutes = 'home' | 'about'
+export type AppRoutes = 'home' | 'about' | 'notFound'
 
 export const RouterPath: Record<AppRoutes, string> = {
 	home: '/',
-	about: '/about'
+	about: '/about',
+	notFound: '*'
 }
