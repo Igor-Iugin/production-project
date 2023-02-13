@@ -16,7 +16,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstanc
 			chunkFilename: 'css/[name].[contenthash:6].css'
 		}),
 		new webpack.DefinePlugin({
-			__DEV__: isDev
+			_DEV_: isDev
 		}),
 		new webpack.HotModuleReplacementPlugin()
 	]
