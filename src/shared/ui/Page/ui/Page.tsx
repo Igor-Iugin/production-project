@@ -1,4 +1,4 @@
-import {FC, ReactNode} from 'react'
+import type {FC, ReactNode} from 'react'
 import {clsx} from 'shared/lib'
 
 import cls from './Page.m.scss'

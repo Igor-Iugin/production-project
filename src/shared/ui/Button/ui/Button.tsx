@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes, FC} from 'react'
+import type {ButtonHTMLAttributes, FC} from 'react'
 import {clsx} from 'shared/lib'
 
 import cls from './Button.m.scss'

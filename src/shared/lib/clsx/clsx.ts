@@ -1,8 +1,8 @@
-type CNProps = string | Record<string, boolean | string> | string[]
+type CNProps = string | Record<string, boolean | string> | string[] | undefined
 
 
-export function clsx(...args: CNProps[]): string {
-	if (!args) return null
+export function clsx(...args: CNProps[]): string | undefined {
+	if (!args) return undefined
 
 	let className: string[] = []
 
@@ -10,13 +10,15 @@ export function clsx(...args: CNProps[]): string {
 		if (Array.isArray(arg)) {
 			className = [...className, ...arg]
 		} else {
-			if (typeof arg === 'string')
+			if (typeof arg === 'string') {
 				return className.push(arg)
+			}
 
-			if (typeof arg === 'object')
-				return Object.entries(arg).forEach(item => {
+			if (typeof arg === 'object') {
+				Object.entries(arg).forEach(item => {
 					item[1] && className.push(item[0])
 				})
+			}
 		}
 	})
 

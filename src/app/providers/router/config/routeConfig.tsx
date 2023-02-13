@@ -1,4 +1,4 @@
-import {RouteProps} from 'react-router-dom'
+import type {RouteProps} from 'react-router-dom'
 import {HomePage} from 'pages/Home'
 import {AboutPage} from 'pages/About'
 import {RouterPath} from 'shared/lib'

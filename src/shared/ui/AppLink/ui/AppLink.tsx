@@ -1,6 +1,8 @@
-import {FC} from 'react'
-import {AppRoutes, clsx, RouterPath} from 'shared/lib'
-import {Link, LinkProps} from 'react-router-dom'
+import type {FC} from 'react'
+import type {AppRoutes} from 'shared/lib'
+import {clsx, RouterPath} from 'shared/lib'
+import type {LinkProps} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import cls from './AppLink.m.scss'
 

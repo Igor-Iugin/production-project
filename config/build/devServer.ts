@@ -1,4 +1,4 @@
-import {BuildOptions} from './types/config'
+import type {BuildOptions} from './types/config'
 import type {Configuration as ServerConfiguration} from 'webpack-dev-server'
 
 

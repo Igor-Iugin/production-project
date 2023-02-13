@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes, FC} from 'react'
+import type {ButtonHTMLAttributes, FC} from 'react'
 
 import {useTheme} from 'shared/contexts'
 import {Button} from 'shared/ui'

@@ -1,4 +1,5 @@
-import React, {createContext, FC, useMemo, useState} from 'react'
+import type {FC} from 'react'
+import {createContext, useMemo, useState} from 'react'
 
 
 export type Theme = 'light' | 'dark'

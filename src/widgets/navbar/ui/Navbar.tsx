@@ -1,4 +1,5 @@
-import {FC, useState} from 'react'
+import type {FC} from 'react'
+import {useState} from 'react'
 import {clsx} from 'shared/lib'
 import {Button} from 'shared/ui'
 import {ThemeSwitch} from 'features/theme-switch'
