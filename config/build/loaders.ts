@@ -3,7 +3,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import type {BuildOptions} from './types/config'
 
 
-export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
+export function buildLoaders({isDev, paths}: BuildOptions): RuleSetRule[] {
 	const typescript = {
 		test: /\.tsx?$/,
 		use: 'ts-loader',
@@ -20,7 +20,9 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
 				plugins: [
 					['i18next-extract', {
 						locales: ['ru', 'en'],
-						keyAsDefaultValue: true
+						keyAsDefaultValue: true,
+						outputPath: `${paths.public}/locales/{{locale}}/{{ns}}.json`,
+						discardOldKeys: true
 					}]
 				]
 			}
