@@ -18,8 +18,8 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({className, ...rest}) => {
 			{...rest}
 		>
 			{theme === 'light'
-				? <MoonIcon width={'24px'} height='auto'/>
-				: <SunIcon width={'24px'} height='auto'/>
+				? <MoonIcon width='24px' height='24px'/>
+				: <SunIcon width='24px' height='24px'/>
 			}
 		</Button>
 	)
