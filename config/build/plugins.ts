@@ -7,7 +7,7 @@ import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer'
 
 
 export function buildPlugins({paths, isDev, analyze}: BuildOptions): WebpackPluginInstance[] {
-	return [
+	const plugins: WebpackPluginInstance[] = [
 		new HtmlWebpackPlugin({
 			template: paths.html
 		}),
@@ -18,10 +18,17 @@ export function buildPlugins({paths, isDev, analyze}: BuildOptions): WebpackPlug
 		}),
 		new webpack.DefinePlugin({
 			_DEV_: isDev
-		}),
-		// @ts-expect-error
-		new BundleAnalyzerPlugin({
-			analyzerMode: analyze ? 'server' : 'disabled'
 		})
 	]
+
+	if (analyze) {
+		plugins.push(
+			// @ts-expect-error
+			new BundleAnalyzerPlugin({
+				analyzerMode: analyze ? 'server' : 'disabled'
+			})
+		)
+	}
+
+	return plugins
 }
