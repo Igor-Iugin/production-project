@@ -21,11 +21,15 @@ export default {
 		'json',
 		'node'
 	],
-
 	rootDir: '../../',
 	testMatch: [
 		'<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
 	],
 	preset: 'ts-jest',
-	setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts']
+	setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+	moduleNameMapper: {
+		'\\.s?css$': 'identity-obj-proxy',
+		'@/(.*)': '<rootDir>src/$1'
+	}
+
 }
