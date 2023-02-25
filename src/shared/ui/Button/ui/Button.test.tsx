@@ -3,8 +3,12 @@ import {Button} from './Button'
 
 
 describe('Button', () => {
-	test('Only 1st param', () => {
+	test('Render', () => {
 		render(<Button>TEST</Button>)
 		expect(screen.getByText('TEST')).toBeInTheDocument()
+	})
+	test('Theme', () => {
+		render(<Button theme='clear'>TEST</Button>)
+		expect(screen.getByText('TEST')).toHaveClass('clear')
 	})
 })
