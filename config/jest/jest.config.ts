@@ -26,5 +26,6 @@ export default {
 	testMatch: [
 		'<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
 	],
-	preset: 'ts-jest'
+	preset: 'ts-jest',
+	setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts']
 }
