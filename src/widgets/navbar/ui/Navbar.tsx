@@ -12,16 +12,16 @@ interface NavbarProps {
 	className?: string
 }
 
-export const Navbar: FC<NavbarProps> = ({className}) => {
-	const [open, setOpen] = useState(true)
+export const Navbar: FC<NavbarProps> = ({className, ...rest}) => {
+	const [open, setOpen] = useState(false)
 
 	const handleOpen = () => {
 		setOpen(prev => !prev)
 	}
 
 	return (
-		<nav className={clsx(cls.root, className, {[cls.open]: open})}>
-			<Button onClick={handleOpen}>Toggle</Button>
+		<nav className={clsx(cls.root, className, {[cls.open]: open})} {...rest}>
+			<Button data-testid='navToggle' onClick={handleOpen}>Toggle</Button>
 
 			<div className={cls.switchers}>
 				<ThemeSwitch/>

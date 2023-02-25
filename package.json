@@ -33,6 +33,7 @@
 		],
 		"moduleNameMapper": {
 			"\\.s?css$": "identity-obj-proxy",
+			"\\.svg": "<rootDir>config/jest/jestEmptyComponent.tsx",
 			"@/(.*)": "<rootDir>src/$1"
 		},
 		"preset": "ts-jest"
@@ -70,6 +71,7 @@
 		"jest": "^27.5.1",
 		"mini-css-extract-plugin": "2.5.3",
 		"react-i18next": "11.15.5",
+		"regenerator-runtime": "0.13.9",
 		"sass": "^1.57.1",
 		"sass-loader": "^13.2.0",
 		"style-loader": "^3.3.1",
