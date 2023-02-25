@@ -20,10 +20,21 @@
 	"author": "Igor Iugin <gigorsaurus@gmail.com>",
 	"license": "ISC",
 	"jest": {
+		"testEnvironment": "jsdom",
+		"testMatch": [
+			"<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"
+		],
 		"moduleDirectories": [
 			"node_modules",
 			"src"
 		],
+		"setupFilesAfterEnv": [
+			"<rootDir>config/jest/setupTests.ts"
+		],
+		"moduleNameMapper": {
+			"\\.s?css$": "identity-obj-proxy",
+			"@/(.*)": "<rootDir>src/$1"
+		},
 		"preset": "ts-jest"
 	},
 	"devDependencies": {
