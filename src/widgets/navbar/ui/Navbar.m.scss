@@ -5,6 +5,7 @@
 	background: var(--inverted-bg-color);
 	transition: width .3s ease-in-out;
 	padding: 0 10px 20px;
+	grid-area: nav;
 }
 
 .open {
