@@ -26,6 +26,10 @@ export default ({config}: WPConfig) => {
 		if (/svg/.test(rule.test as string)) {
 			return {...rule, exclude: /\.svg$/i}
 		}
+		if (rule.loader === 'babel-loader') {
+			return null
+		}
+		
 		return rule
 	})
 
