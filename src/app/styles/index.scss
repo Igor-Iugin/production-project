@@ -15,3 +15,18 @@
 	grid-template-rows: auto 1fr;
 	grid-template-columns: auto 1fr;
 }
+
+/* Styles for Storybook */
+.app > .app {
+	width: 100vw;
+}
+
+.sb {
+	grid-area: header;
+}
+
+.griddles {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

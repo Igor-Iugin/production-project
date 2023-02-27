@@ -13,6 +13,6 @@ export const parameters = {
 
 export const decorators = [
 	StyleDecorator,
-	ThemeDecorator('light'),
+	ThemeDecorator('light', false),
 	RouterDecorator
 ]
