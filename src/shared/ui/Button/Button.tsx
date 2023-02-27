@@ -5,7 +5,7 @@ import cls from './Button.m.scss'
 
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-	theme?: 'clear'
+	theme?: 'clear' | 'outline'
 }
 
 export const Button: FC<ButtonProps> = ({
