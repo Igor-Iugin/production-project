@@ -44,7 +44,10 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 1,
 		'@typescript-eslint/ban-ts-comment': 0,
 
-		'i18next/no-literal-string': [2, {markupOnly: true}]
+		'i18next/no-literal-string': [2, {
+			markupOnly: true,
+			ignoreAttribute: ['data-testid', 'to']
+		}]
 	},
 	globals: {
 		_DEV_: true
