@@ -1,4 +1,4 @@
-import {StyleDecorator, ThemeDecorator} from '../../src/shared/config/storybook'
+import {RouterDecorator, StyleDecorator, ThemeDecorator} from '../../src/shared/config/storybook'
 
 
 export const parameters = {
@@ -13,5 +13,6 @@ export const parameters = {
 
 export const decorators = [
 	StyleDecorator,
-	ThemeDecorator('light')
+	ThemeDecorator('light'),
+	RouterDecorator
 ]
