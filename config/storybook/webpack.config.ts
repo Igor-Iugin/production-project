@@ -20,6 +20,19 @@ export default ({config}: WPConfig) => {
 	config.resolve?.modules?.push(paths.src)
 	config.resolve?.extensions?.push('.ts', '.tsx')
 
+	// @ts-expect-error
+	config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
+		if (/svg/.test(rule.test as string)) {
+			return {...rule, exclude: /\.svg$/i}
+		}
+		return rule
+	})
+
+	config.module?.rules?.push({
+		test: /\.svg$/i,
+		issuer: /\.[jt]sx?$/,
+		use: ['@svgr/webpack']
+	})
 	config.module?.rules?.push(CssLoader(true))
 
 	return config

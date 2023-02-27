@@ -37,6 +37,7 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 1,
 		'@typescript-eslint/ban-ts-comment': 0,
 		'@typescript-eslint/consistent-type-assertions': 0,
+		'@typescript-eslint/prefer-includes': 0,
 
 		'i18next/no-literal-string': [2, {
 			markupOnly: true,
