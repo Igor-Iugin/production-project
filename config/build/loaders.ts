@@ -1,6 +1,7 @@
 import type {RuleSetRule} from 'webpack'
 import type {BuildOptions} from './types/config'
 import {CssLoader} from './loaders/cssLoaders'
+import {babelLoader} from './loaders/babelLoader'
 
 
 export function buildLoaders({isDev, paths}: BuildOptions): RuleSetRule[] {
@@ -10,24 +11,7 @@ export function buildLoaders({isDev, paths}: BuildOptions): RuleSetRule[] {
 		exclude: /node_modules/
 	}
 
-	const babel = {
-		test: /\.(js|jsx|ts|tsx)$/,
-		exclude: /node_modules/,
-		use: {
-			loader: 'babel-loader',
-			options: {
-				presets: ['@babel/preset-env'],
-				plugins: [
-					['i18next-extract', {
-						locales: ['ru', 'en'],
-						keyAsDefaultValue: true,
-						outputPath: `${paths.public}/locales/{{locale}}/{{ns}}.json`,
-						discardOldKeys: true
-					}]
-				]
-			}
-		}
-	}
+	const babel = babelLoader(paths)
 
 	const svg = {
 		test: /\.svg$/i,

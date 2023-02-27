@@ -2,6 +2,7 @@ import type webpack from 'webpack'
 import type {BuildPaths} from '../build/types/config'
 import path from 'path'
 import {CssLoader} from '../build/loaders/cssLoaders'
+import {babelLoader} from '../build/loaders/babelLoader'
 
 
 interface WPConfig {
@@ -10,10 +11,10 @@ interface WPConfig {
 
 export default ({config}: WPConfig) => {
 	const paths: BuildPaths = {
-		entry: '',
-		build: '',
-		html: '',
-		public: '',
+		entry: path.resolve(__dirname, '..', '..', 'src', 'index.tsx'),
+		build: path.resolve(__dirname, '..', '..', 'dist'),
+		html: path.resolve(__dirname, '..', '..', 'public', 'index.html'),
+		public: path.resolve(__dirname, '..', '..', 'public'),
 		src: path.resolve(__dirname, '..', '..', 'src')
 	}
 
@@ -33,6 +34,7 @@ export default ({config}: WPConfig) => {
 		issuer: /\.[jt]sx?$/,
 		use: ['@svgr/webpack']
 	})
+	config.module?.rules?.push(babelLoader(paths))
 	config.module?.rules?.push(CssLoader(true))
 
 	return config
