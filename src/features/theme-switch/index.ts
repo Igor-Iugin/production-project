@@ -1,1 +1,1 @@
-export {ThemeSwitch} from './ui/ThemeSwitch'
+export {ThemeSwitch} from './ThemeSwitch'

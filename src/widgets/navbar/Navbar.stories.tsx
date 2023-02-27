@@ -1,4 +1,3 @@
-import React from 'react'
 import type {ComponentMeta, ComponentStory} from '@storybook/react'
 
 import {Navbar} from './Navbar'
@@ -17,7 +16,8 @@ const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />
 
 export const Light = Template.bind({})
 Light.args = {}
+Light.decorators = [ThemeDecorator('light', true)]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator('dark')]
+Dark.decorators = [ThemeDecorator('dark', true)]

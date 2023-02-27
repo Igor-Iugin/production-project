@@ -1,23 +1,22 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react'
 
-import {Header} from './Header'
+import {PageError} from './PageError'
 import {ThemeDecorator} from 'shared/config/storybook'
 
 
 export default {
-	title: 'widget/Header',
-	component: Header,
+	title: 'widget/PageError',
+	component: PageError,
 	argTypes: {
 		backgroundColor: {control: 'color'}
 	}
-} as ComponentMeta<typeof Header>
+} as ComponentMeta<typeof PageError>
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />
+const Template: ComponentStory<typeof PageError> = (args) => <PageError {...args} />
 
 export const Light = Template.bind({})
 Light.args = {}
-Light.decorators = [ThemeDecorator('light', true)]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator('dark', true)]
+Dark.decorators = [ThemeDecorator('dark')]

@@ -1,1 +1,1 @@
-export {LangSwitch} from './ui/LangSwitch'
+export {LangSwitch} from './LangSwitch'

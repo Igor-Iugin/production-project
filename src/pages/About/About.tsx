@@ -1,9 +1,9 @@
-import React from 'react'
+import type {FC} from 'react'
 import {Page} from 'shared/ui'
 import {useTranslation} from 'react-i18next'
 
 
-const About = () => {
+const About: FC = () => {
 	const {t} = useTranslation('about')
 	return (
 		<Page>

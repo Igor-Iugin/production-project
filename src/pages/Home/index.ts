@@ -1,1 +1,1 @@
-export {HomeAsync as HomePage} from './ui/Home.async'
+export {HomeAsync as HomePage} from './Home.async'

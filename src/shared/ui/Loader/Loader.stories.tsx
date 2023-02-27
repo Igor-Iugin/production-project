@@ -1,23 +1,22 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react'
 
-import {Header} from './Header'
+import {Loader} from './Loader'
 import {ThemeDecorator} from 'shared/config/storybook'
 
 
 export default {
-	title: 'widget/Header',
-	component: Header,
+	title: 'shared/Loader',
+	component: Loader,
 	argTypes: {
 		backgroundColor: {control: 'color'}
 	}
-} as ComponentMeta<typeof Header>
+} as ComponentMeta<typeof Loader>
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />
+const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />
 
 export const Light = Template.bind({})
 Light.args = {}
-Light.decorators = [ThemeDecorator('light', true)]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator('dark', true)]
+Dark.decorators = [ThemeDecorator('dark')]

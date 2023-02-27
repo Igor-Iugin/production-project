@@ -1,23 +1,22 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react'
 
-import {Header} from './Header'
+import {NotFound} from './NotFound'
 import {ThemeDecorator} from 'shared/config/storybook'
 
 
 export default {
-	title: 'widget/Header',
-	component: Header,
+	title: 'pages/NotFound',
+	component: NotFound,
 	argTypes: {
 		backgroundColor: {control: 'color'}
 	}
-} as ComponentMeta<typeof Header>
+} as ComponentMeta<typeof NotFound>
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />
+const Template: ComponentStory<typeof NotFound> = (args) => <NotFound {...args} />
 
 export const Light = Template.bind({})
 Light.args = {}
-Light.decorators = [ThemeDecorator('light', true)]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator('dark', true)]
+Dark.decorators = [ThemeDecorator('dark')]
