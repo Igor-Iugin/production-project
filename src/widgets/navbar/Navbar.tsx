@@ -1,7 +1,6 @@
 import type {FC} from 'react'
 import {useState} from 'react'
 import {clsx} from 'shared/lib'
-import {Button} from 'shared/ui'
 import {ThemeSwitch} from 'features/theme-switch'
 
 import cls from './Navbar.m.scss'
@@ -21,7 +20,7 @@ export const Navbar: FC<NavbarProps> = ({className, ...rest}) => {
 
 	return (
 		<nav className={clsx(cls.root, className, {[cls.open]: open})} {...rest}>
-			<Button data-testid='navToggle' onClick={handleOpen}>Toggle</Button>
+			{/* <Button data-testid='navToggle' onClick={handleOpen}>Toggle</Button> */}
 
 			<div className={cls.switchers}>
 				<ThemeSwitch/>
