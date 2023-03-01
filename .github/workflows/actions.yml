@@ -31,3 +31,7 @@ jobs:
         run: yarn stylelint
       - name: Unit testing
         run: yarn test:unit
+      - name: Build Storybook
+        run: yarn storybook:build
+      - name: Screenshot testing
+        run: yarn test:ui:ci
