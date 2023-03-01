@@ -13,18 +13,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Starting Node.js ${{matrix.node-version}}
-        uses: actions/setup-node@v1
+      - name: Set up Node.js ${{matrix.node-version}}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node-version}}
+          cache: yarn
 
+      - name: Install yarn
+        run: npm install -g yarn
       - name: Install modules
-        run: npm ci
+        run: yarn
       - name: Build production
-        run: npm run build:prod
+        run: yarn build:prod
       - name: Typescript linting
-        run: npm run lint
+        run: yarn lint
       - name: CSS linting
-        run: npm run stylelint
+        run: yarn stylelint
       - name: Unit testing
-        run: npm run test:unit
+        run: yarn test:unit
