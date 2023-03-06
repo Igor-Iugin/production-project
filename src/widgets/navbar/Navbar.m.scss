@@ -1,6 +1,6 @@
 .root {
 	display: grid;
-	align-content: space-between;
+	justify-content: center;
 	width: 80px;
 	background: var(--inverted-bg-color);
 	transition: width .3s ease-in-out;
@@ -10,8 +10,9 @@
 }
 
 .switchers {
-	justify-self: end;
-	display: grid;
+	align-self: end;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
@@ -21,7 +22,7 @@
 	width: 300px;
 
 	.switchers {
-		display: flex;
+		flex-direction: row;
 	}
 }
 
@@ -29,6 +30,7 @@
 	position: absolute;
 	bottom: 40px;
 	right: -40px;
+	border-radius: 0;
 
 	svg {
 		height: 20px;

@@ -13,8 +13,7 @@ export function babelLoader(paths: BuildPaths) {
 					['i18next-extract', {
 						locales: ['ru', 'en'],
 						keyAsDefaultValue: true,
-						outputPath: `${paths.public}/locales/{{locale}}/{{ns}}.json`,
-						discardOldKeys: true
+						outputPath: `${paths.public}/locales/{{locale}}/{{ns}}.json`
 					}]
 				]
 			}

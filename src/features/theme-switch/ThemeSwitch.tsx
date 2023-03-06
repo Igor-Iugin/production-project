@@ -13,10 +13,7 @@ interface ThemeSwitchProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({className, ...rest}) => {
 	const {theme, toggleTheme} = useTheme()
 	return (
-		<Button
-			onClick={toggleTheme}
-			{...rest}
-		>
+		<Button icon theme='clear' onClick={toggleTheme} {...rest}>
 			{theme === 'light'
 				? <MoonIcon width='24px' height='24px'/>
 				: <SunIcon width='24px' height='24px'/>

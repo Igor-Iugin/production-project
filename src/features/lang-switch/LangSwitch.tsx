@@ -4,17 +4,19 @@ import {useTranslation} from 'react-i18next'
 
 
 interface LangSwitchProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	short?: boolean
 }
 
-export const LangSwitch: FC<LangSwitchProps> = ({className, ...rest}) => {
+export const LangSwitch: FC<LangSwitchProps> = ({className, short, ...rest}) => {
 	const {t, i18n} = useTranslation()
 
 	const toggle = async () => {
-		i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
+		await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
 	}
+
 	return (
-		<Button onClick={toggle} {...rest}>
-			{t('Язык')}
+		<Button theme='clear' onClick={toggle} {...rest}>
+			{t(short ? 'Короткий язык' : 'Язык')}
 		</Button>
 	)
 }

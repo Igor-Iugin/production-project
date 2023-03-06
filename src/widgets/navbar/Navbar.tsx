@@ -35,7 +35,7 @@ export const Navbar: FC<NavbarProps> = ({className, ...rest}) => {
 
 			<div className={cls.switchers}>
 				<ThemeSwitch/>
-				<LangSwitch/>
+				<LangSwitch short={!open}/>
 			</div>
 		</nav>
 	)

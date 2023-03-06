@@ -5,28 +5,31 @@
 	padding: 4px 12px;
 	cursor: pointer;
 	border-radius: 8px;
+}
 
-	&.size-s {
-		height: var(--font-line-m);
-		font: var(--font-s);
+.size-s {
+	height: var(--font-line-s);
+	min-width: var(--font-line-s);
+	font: var(--font-s);
+}
 
-	}
+.size-m {
+	height: var(--font-line-m);
+	min-width: var(--font-line-m);
+	font: var(--font-s);
+}
 
-	&.size-m {
-		height: var(--font-line-xl);
-		font: var(--font-s);
-	}
-
-	&.size-xl {
-		height: 48px;
-		font: var(--font-m);
-	}
+.size-xl {
+	height: 48px;
+	min-width: 48px;
+	font: var(--font-m);
 }
 
 .icon {
 	height: 40px;
 	width: 40px;
 	padding: 4px;
+	min-width: auto;
 
 	&.size-s {
 		width: var(--font-line-s);

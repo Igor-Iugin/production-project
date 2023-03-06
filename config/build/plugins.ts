@@ -18,7 +18,8 @@ export function buildPlugins({paths, isDev, analyze}: BuildOptions): WebpackPlug
 		}),
 		new webpack.DefinePlugin({
 			_DEV_: isDev
-		})
+		}),
+		new webpack.HotModuleReplacementPlugin()
 	]
 
 	if (analyze) {
