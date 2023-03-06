@@ -1,12 +1,45 @@
 .root {
 	display: grid;
 	justify-content: center;
+	align-content: space-between;
 	width: 80px;
 	background: var(--inverted-bg-color);
 	transition: width .3s ease-in-out;
-	padding: 0 10px 20px;
+	padding: 20px 10px;
 	grid-area: nav;
 	position: relative;
+}
+
+.nav {
+	display: grid;
+	gap: 12px;
+	align-items: center;
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	svg {
+		height: var(--font-line-s);
+		width: var(--font-line-s);
+	}
+
+	span {
+		opacity: 0;
+		transition: .3s all ease;
+		width: 0;
+	}
+
+	&.open {
+		width: 100%;
+
+		span {
+			opacity: 1;
+			width: auto;
+		}
+	}
 }
 
 .switchers {
@@ -20,6 +53,7 @@
 
 .open {
 	width: 300px;
+	justify-content: center;
 
 	.switchers {
 		flex-direction: row;
