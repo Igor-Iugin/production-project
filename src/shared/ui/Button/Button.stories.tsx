@@ -2,6 +2,7 @@ import type {ComponentMeta, ComponentStory} from '@storybook/react'
 
 import {Button} from './Button'
 import {ThemeDecorator} from 'shared/config/storybook'
+import {ChevronRightIcon} from '@radix-ui/react-icons'
 
 
 export default {
@@ -31,6 +32,26 @@ Outline.args = {
 	theme: 'outline'
 }
 
+export const OutlineS = Template.bind({})
+OutlineS.args = {
+	children: 'Button',
+	theme: 'outline',
+	size: 's'
+}
+
+export const OutlineXL = Template.bind({})
+OutlineXL.args = {
+	children: 'Button',
+	theme: 'outline',
+	size: 'xl'
+}
+
+export const Inverted = Template.bind({})
+Inverted.args = {
+	children: 'Button',
+	theme: 'inverted'
+}
+
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {
 	children: 'Button'
@@ -50,3 +71,38 @@ OutlineDark.args = {
 	theme: 'outline'
 }
 OutlineDark.decorators = [ThemeDecorator('dark')]
+
+export const InvertedDark = Template.bind({})
+InvertedDark.args = {
+	children: 'Button',
+	theme: 'inverted'
+}
+InvertedDark.decorators = [ThemeDecorator('dark')]
+
+
+export const Icon = Template.bind({})
+Icon.args = {
+	children: <ChevronRightIcon/>,
+	icon: true
+}
+
+export const IconS = Template.bind({})
+IconS.args = {
+	children: <ChevronRightIcon/>,
+	icon: true,
+	size: 's'
+}
+
+export const IconM = Template.bind({})
+IconM.args = {
+	children: <ChevronRightIcon/>,
+	icon: true,
+	size: 'm'
+}
+
+export const IconXL = Template.bind({})
+IconXL.args = {
+	children: <ChevronRightIcon/>,
+	icon: true,
+	size: 'xl'
+}
