@@ -1,4 +1,4 @@
-import {RouterDecorator, StyleDecorator, ThemeDecorator} from '../../src/shared/config/storybook'
+import {RouterDecorator, StyleDecorator, ThemeDecorator} from '../../src/shared/lib/storybook'
 
 
 export const parameters = {

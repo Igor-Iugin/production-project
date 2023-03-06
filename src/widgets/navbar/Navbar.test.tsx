@@ -1,15 +1,15 @@
 import {fireEvent, screen} from '@testing-library/react'
 import {Navbar} from './Navbar'
-import {renderI18n} from 'shared/lib/tests/renderI18n'
+import {renderComponent} from 'shared/lib/tests'
 
 
 describe('Navbar', () => {
 	test('Render', () => {
-		renderI18n(<Navbar data-testid='navbar'/>)
+		renderComponent(<Navbar data-testid='navbar'/>)
 		expect(screen.getByTestId('navbar')).toBeInTheDocument()
 	})
 	test('Collapsing', () => {
-		renderI18n(<Navbar data-testid='navbar'/>)
+		renderComponent(<Navbar data-testid='navbar'/>)
 		const navbar = screen.getByTestId('navbar')
 		const toggleBtn = screen.getByTestId('navToggle')
 		expect(navbar).toBeInTheDocument()

@@ -1,7 +1,7 @@
 import type {ComponentMeta, ComponentStory} from '@storybook/react'
 
 import {Button} from './Button'
-import {ThemeDecorator} from 'shared/config/storybook'
+import {ThemeDecorator} from 'shared/lib/storybook'
 import {ChevronRightIcon} from '@radix-ui/react-icons'
 
 
